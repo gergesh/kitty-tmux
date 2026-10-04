@@ -1,0 +1,15 @@
+[package]
+name = "kitty-tmux"
+version = "0.1.0"
+edition = "2024"
+description = "Run a command on a pty and wrap its kitty graphics commands in tmux passthrough, so images reach the outer terminal"
+license = "MIT"
+repository = "https://github.com/gergesh/kitty-tmux"
+keywords = ["tmux", "kitty", "terminal", "images", "claude-code"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+libc = "0.2.190"
+memchr = "2.8.3"
+nix = { version = "0.31.3", features = ["term", "process", "signal", "poll", "ioctl", "fs"] }
+signal-hook = "0.4.4"
